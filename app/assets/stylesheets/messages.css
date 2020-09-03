@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  width: 300px;
+  height: 100vh;
+  background-color: #253141;
+}
+
+.side-top {
+  height: 100px;
+  padding: 0, 20px;
+}
+
+.side-bottom {
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
+  padding: 0, 20px;
+}
+
+.main-chat {
+  width: calc(100% - 300px);
+  background-color: #ffffff;
+  padding: 0, 40px;
+}
+
+.main-top {
+  height: 100px;
+  margin-bottom: 46px;
+  padding: 0, 40px;
+}
+
+.main-messages {
+  height: calc(100vh - 190px);
+  background-color: #fafafa;
+  padding: 0, 40px;
+}
+
+.main-bottom {
+  height: 90px;
+  background-color: #dddddd;
+  padding: 20px, 40px;
+}
