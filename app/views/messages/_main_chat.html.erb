@@ -1,7 +1,7 @@
 <div class = "main-top">
   <div class = "main-top-right">
     <div class = "groupe-name">
-      <h1>hogefuga</h1>
+      <%= @room.name %>
     </div>
   </div> 
 
@@ -13,26 +13,7 @@
 </div>
 
 <div class = "main-middle">
-  <div class = "message-box">
-    <div class = "user-time">
-      <div class = "name">Tom</div>
-      <div class = "time">2020/3/31(Wed) 12:43:30</div>
-    </div> 
-    <div class = "message-container">
-      <div class = "message">おはよう</div>
-    </div> 
-  </div>
-
-  <div class = "message-box">
-    <div class = "user-time">
-      <div class = "name">Tom</div>
-      <div class = "time">2020/3/31(Wed) 12:43:30</div>
-    </div> 
-    <div class = "message-container">
-      <div class = "message">おはよう</div>
-    </div>  
-  </div>
-
+ <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], html: {class: "main-bottom"}, local: true do |f|%>

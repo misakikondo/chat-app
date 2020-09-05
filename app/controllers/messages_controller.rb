@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @room = Room.find(params[:room_id])
     #messageは新しいインスタンスに
     #roomは選択したルームがサイドバーからparams[:room_id]として送信された
-
+    @messages = @room.messages.includes(:user)
   end
 
   def create
@@ -18,7 +18,8 @@ class MessagesController < ApplicationController
   end
 
 private
- def message_params
-  params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
- end 
+ 
+  def message_params
+    params.require(:message).permit(:content).merge(user_id: current_user.id)
+  end
 end
